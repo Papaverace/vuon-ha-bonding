@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vươn Hạ – Bonding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Bungee&family=Itim&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: playful, warm, retro – matches the "Bonding Vươn Hạ" Canva deck
+   IDEA: a groovy 70s/Y2K sticker poster – halftone dots, puffy clouds, flowers, lightning
+   PICTURE: hero puffy cloud with outlined "VƯƠN HẠ" script, flowers, lightning and sparkles
+   COLOUR and TYPE: pastel pink, butter yellow, mint teal, sun orange, navy outline; Lobster + Bungee + Itim
+   LAYOUT: full-bleed halftone bands alternating pink/yellow/teal, cream rounded cards with orange borders */
+:root{color-scheme:light;--pink:#bfe8dd;--pink2:#249a86;--yel:#fbe7a1;--yel2:#f2a516;--teal:#ffd66b;--teal2:#f2a516;--navy:#16284a;--cream:#fff8ef;--ink:#16284a;--soft:#4a5878}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.6 "Itim","Be Vietnam Pro",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{line-height:1.1;text-wrap:balance;margin:0 0 .4em;font-weight:400}
+h2{font:400 clamp(40px,5.5vw,64px)/1.1 "Lobster",cursive;color:var(--yel);-webkit-text-stroke:2px var(--yel2);paint-order:stroke fill;text-shadow:3px 3px 0 var(--yel2),5px 5px 0 #fff8;letter-spacing:.5px}
+.pinkh h2{font:400 clamp(30px,4.6vw,56px)/1.15 "Bungee",sans-serif;color:var(--pink);-webkit-text-stroke:2px var(--navy);text-shadow:4px 4px 0 var(--navy)}
+.tealh h2{color:#fff;-webkit-text-stroke:2px var(--pink2);text-shadow:3px 3px 0 var(--pink2)}
+h3{font:400 24px "Lobster",cursive;color:var(--pink2)}
+p{margin:0 0 1em;max-width:68ch}
+a{color:var(--pink2)}
+b,strong{color:var(--yel2)}
+.band{padding:clamp(44px,6vw,90px) max(5vw,16px);position:relative}
+.wrap{max-width:1240px;margin:0 auto;position:relative}
+.lede{font-size:18px}
+.dots-p{background:radial-gradient(circle,#fff9 1.6px,transparent 2px) 0 0/12px 12px,var(--pink)}
+.dots-y{background:radial-gradient(circle,#fff 1.8px,transparent 2.2px) 0 0/12px 12px,linear-gradient(var(--cream),var(--yel))}
+.dots-t{background:radial-gradient(circle,var(--teal) 2px,transparent 2.4px) 0 0/13px 13px,var(--cream)}
+.teal{background:var(--teal)}
+nav{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;border-bottom:4px solid var(--pink2)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;padding:8px max(5vw,16px)}
+nav b{font:400 26px "Lobster",cursive;margin-right:auto;color:var(--yel)}
+nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:99px;font-size:15px}
+nav a:hover,nav a:focus-visible{background:var(--pink2)}
+.hero{padding:clamp(20px,3vw,40px) max(3vw,12px) clamp(30px,4vw,56px)}
+.hero svg{width:100%;max-width:1100px;height:auto;display:block;margin:0 auto}
+.hero .txt{max-width:760px;margin:0 auto;text-align:center}
+.hero .lede{font-size:20px;margin-inline:auto}
+.row{display:flex;flex-wrap:wrap;gap:10px}.hero .row{justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:99px;border:3px solid var(--navy);background:var(--pink2);color:#fff;font:400 17px "Itim";cursor:pointer;text-decoration:none;box-shadow:3px 3px 0 var(--navy)}
+.btn.ghost{background:var(--yel);color:var(--navy)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--navy)}
+.btn:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--yel2);outline-offset:2px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.card{background:var(--cream);border:2.5px solid var(--yel2);border-radius:24px;padding:22px;box-shadow:5px 5px 0 var(--pink)}
+.card small{color:var(--soft)}
+.split{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px;align-items:center}
+.path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.step{background:var(--cream);border-radius:28px;padding:26px 20px;text-align:center;border:3px solid var(--navy);box-shadow:6px 6px 0 var(--pink2)}
+.dot{width:70px;height:70px;margin:-60px auto 10px;display:grid;place-items:center;font:400 30px "Bungee";color:var(--navy);background:var(--yel);border:3px solid var(--navy);border-radius:50%;box-shadow:3px 3px 0 var(--navy)}
+.step p{margin-inline:auto}
+.ban{position:relative;padding-top:30px}
+.ban .ic{position:absolute;top:-18px;left:18px;padding:4px 16px;border-radius:99px;font:400 16px "Bungee";color:#fff;border:2.5px solid var(--navy)}
+.note{font-size:14px;color:var(--soft);margin-top:14px}
+details{background:var(--cream);border:2.5px solid var(--navy);border-radius:20px;margin-bottom:12px;box-shadow:4px 4px 0 var(--pink2)}
+summary{cursor:pointer;padding:14px 20px;font-size:18px;min-height:46px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 22px "Bungee";color:var(--pink2)}
+details[open] summary::after{content:"–"}
+details>div{padding:0 20px 16px}
+details ul{margin:0;padding-left:20px}details li{margin-bottom:6px}
+.lv{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));margin-top:20px}
+.lv .card{background:var(--c);border-color:var(--navy);box-shadow:5px 5px 0 var(--navy)}
+.lv h3{color:var(--navy)}
+.tbl{background:var(--cream);border:2.5px solid var(--navy);border-radius:20px;padding:6px 10px;box-shadow:5px 5px 0 var(--teal2)}
+table{width:100%;border-collapse:collapse;font:15px/1.5 "Be Vietnam Pro",sans-serif}
+th,td{text-align:left;padding:10px 12px;border-bottom:1.5px dashed #e3cfa9;vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font:400 15px "Itim";color:var(--pink2)}
+td.n{white-space:nowrap;font-weight:700;text-align:right}
+.p{color:#2a8c6a}.m{color:#d24a6d}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.tabs button{min-height:44px;padding:0 18px;border-radius:99px;border:2.5px solid var(--navy);background:var(--cream);color:var(--navy);font:400 16px "Itim";cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--yel);box-shadow:3px 3px 0 var(--navy)}
+.scroll{overflow-x:auto}
+.calc{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.ci{display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:1.5px dashed #e3cfa9;font-size:16px}
+.ci span{flex:1}.ci b{width:40px;text-align:right}
+.ci button{width:44px;height:44px;border-radius:14px;border:2.5px solid var(--navy);background:var(--yel);color:var(--navy);font:400 20px "Bungee";cursor:pointer}
+.ci output{width:28px;text-align:center;font-size:18px}
+.total{position:sticky;top:84px;text-align:center;background:var(--pink)}
+.total .big{font:400 clamp(70px,10vw,104px)/1 "Bungee";color:var(--yel);-webkit-text-stroke:3px var(--navy);text-shadow:5px 5px 0 var(--navy)}
+.games{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}
+.game{background:var(--cream);border-radius:28px;padding:24px;border:3px solid var(--navy);box-shadow:7px 7px 0 var(--pink2)}
+.game h3{display:flex;gap:10px;align-items:center;font-size:28px}
+.game h3 i{font:400 18px "Bungee";background:var(--yel);color:var(--navy);border:2.5px solid var(--navy);border-radius:12px;padding:2px 10px}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 16px;border-radius:16px;border:2.5px solid var(--navy);background:#fff;color:var(--ink);font:400 17px "Itim";cursor:pointer;min-height:46px}
+.opt:hover{background:var(--yel)}
+.opt.ok{background:#bfe8cf}.opt.no{background:#f6b6c6}
+.wheel{position:relative;width:min(100%,300px);margin:8px auto}
+.wheel svg{width:100%;height:auto;display:block;transition:transform 4s cubic-bezier(.2,.8,.2,1)}
+.wheel::after{content:"";position:absolute;top:-8px;left:50%;transform:translateX(-50%);border:14px solid transparent;border-top:24px solid var(--navy)}
+.res{min-height:52px;text-align:center;font-size:19px;margin:10px 0;color:var(--pink2)}
+.word{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:14px 0}
+.word span{width:34px;height:46px;border-bottom:4px solid var(--navy);display:grid;place-items:center;font:400 24px "Bungee";color:var(--pink2)}
+.word span.sp{border:0;width:14px}
+.keys{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.keys button{width:42px;height:44px;border-radius:12px;border:2px solid var(--navy);background:var(--yel);color:var(--navy);font:400 15px "Bungee";cursor:pointer}
+.keys button:disabled{opacity:.3}
+.bingo{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.bingo button{aspect-ratio:1;border-radius:14px;border:2.5px solid var(--navy);background:#fff;color:var(--ink);font:400 13.5px/1.2 "Itim";padding:4px;cursor:pointer}
+.bingo button.on{background:var(--pink2);color:#fff}
+.links{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.links a{display:block;padding:16px 20px;border-radius:99px;background:var(--c,var(--teal));border:2.5px solid var(--navy);color:var(--navy);text-decoration:none;font-size:18px;box-shadow:3px 3px 0 var(--navy)}
+.links a small{display:block;font-size:13px;color:var(--soft)}
+footer{background:var(--navy);color:var(--yel);text-align:center;padding:40px 16px}
+footer .bye{font:400 clamp(38px,6vw,64px)/1.1 "Lobster",cursive;color:#fff;-webkit-text-stroke:2px var(--pink2);paint-order:stroke fill;text-shadow:4px 4px 0 var(--pink2);margin-bottom:10px}
+.wob{animation:wob 3.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes wob{50%{transform:rotate(8deg) scale(1.06)}}
+@media(prefers-reduced-motion:reduce){.wob{animation:none}.wheel svg{transition:none}html{scroll-behavior:auto}}
+@media(max-width:800px){.calc,.split{grid-template-columns:minmax(0,1fr)}.total{position:static}}
+@media(max-width:700px){.path{grid-template-columns:minmax(0,1fr);gap:48px}}
+@media(max-width:600px){nav a{padding:6px 8px;font-size:14px}table{font-size:13px}h2{-webkit-text-stroke-width:1.5px}
+.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1.5px dashed #e3cfa9}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--pink2)}.stack td:empty{display:none}}
+</style>
+
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<nav><div class="wrap"><b>Vươn Hạ</b>
+<a href="#gioi-thieu">Giới thiệu</a><a href="#hoat-dong">Hoạt động</a><a href="#core">Core / Ban</a><a href="#noi-quy">Nội quy</a><a href="#tinh-diem">Tính điểm</a><a href="#hoi-dap">Hỏi đáp</a><a href="#game">Game</a></div></nav>
+
+<header class="band hero dots-p"><div class="wrap">
+<svg viewBox="0 0 1100 470" role="img" aria-label="Chữ VƯƠN HẠ trên nền mây hồng, hoa cam và tia sét vàng">
+<defs>
+<g id="fl"><g stroke="#16284a" stroke-width="3"><circle cx="0" cy="-26" r="20"/><circle cx="25" cy="-8" r="20"/><circle cx="15" cy="21" r="20"/><circle cx="-15" cy="21" r="20"/><circle cx="-25" cy="-8" r="20"/></g><circle r="12" fill="#ffd66b" stroke="#16284a" stroke-width="3"/></g>
+<path id="sp" d="M0-22Q3-3 22 0Q3 3 0 22Q-3 3-22 0Q-3-3 0-22Z"/>
+<g id="cl"><circle cx="-120" cy="10" r="70"/><circle cx="-40" cy="-40" r="85"/><circle cx="60" cy="-30" r="80"/><circle cx="140" cy="15" r="65"/><circle cx="40" cy="40" r="75"/><circle cx="-60" cy="45" r="70"/></g>
+</defs>
+<path d="M600 70L760 40L705 95L880 55L800 120L960 105" fill="none" stroke="#16284a" stroke-width="40" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600 70L760 40L705 95L880 55L800 120L960 105" fill="none" stroke="#fbe7a1" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600 70L760 40L705 95L880 55L800 120L960 105" fill="none" stroke="#f2a516" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" opacity=".6"/>
+<use href="#cl" transform="translate(330 300) scale(1.35)" fill="#f2a516" stroke="#16284a" stroke-width="3"/>
+<use href="#cl" transform="translate(770 300) scale(1.3)" fill="#e98fb8" stroke="#16284a" stroke-width="3"/>
+<use href="#cl" transform="translate(315 285) scale(1.22)" fill="#f7c9dc"/>
+<use href="#cl" transform="translate(760 285) scale(1.18)" fill="#fad6e5"/>
+<use href="#cl" transform="translate(550 265) scale(1.1)" fill="#fde9f1"/>
+<g fill="#fff" opacity=".7"><circle cx="230" cy="220" r="5"/><circle cx="260" cy="250" r="3"/><circle cx="880" cy="230" r="5"/><circle cx="420" cy="380" r="4"/><circle cx="700" cy="380" r="4"/></g>
+<g class="wob"><use href="#fl" transform="translate(185 140) scale(1.25)" fill="#f2a516"/></g>
+<g class="wob"><use href="#fl" transform="translate(965 220) scale(1.6) rotate(20)" fill="#bfe8dd"/></g>
+<use href="#fl" transform="translate(970 400) scale(.9)" fill="#fbe7a1"/>
+<use href="#fl" transform="translate(120 380) scale(.8)" fill="#249a86"/>
+<g fill="#fbe7a1" stroke="#16284a" stroke-width="2.5"><use href="#sp" transform="translate(500 90) scale(1.1)"/><use href="#sp" transform="translate(880 330) scale(.9)"/><use href="#sp" transform="translate(260 410) scale(.8)"/><use href="#sp" transform="translate(1040 120) scale(.7)"/></g>
+<g fill="#ffd66b" stroke="#16284a" stroke-width="2.5"><use href="#sp" transform="translate(80 250) scale(.7)"/><use href="#sp" transform="translate(640 420) scale(.7)"/></g>
+<text x="555" y="300" text-anchor="middle" font-family="Lobster,cursive" font-size="170" fill="#fff8ef" stroke="#16284a" stroke-width="18" stroke-linejoin="round" paint-order="stroke" transform="rotate(-5 555 280)">Vươn Hạ</text>
+<text x="555" y="300" text-anchor="middle" font-family="Lobster,cursive" font-size="170" fill="#fff8ef" transform="rotate(-5 555 280)">Vươn Hạ</text>
+<text x="555" y="400" text-anchor="middle" font-family="Bungee,sans-serif" font-size="30" fill="#249a86" stroke="#16284a" stroke-width="6" paint-order="stroke" transform="rotate(-5 555 280)">BONDING · MÙA 1</text>
+</svg>
+<div class="txt">
+<p class="lede">Người trẻ đồng hành cùng cộng đồng. Chào mừng bạn đến với buổi Bonding đầu tiên – nơi chúng mình làm quen, hiểu dự án và cùng nhau chơi thật vui!</p>
+<div class="row"><a class="btn" href="#game">Vào chơi game</a><a class="btn ghost" href="#gioi-thieu">Tìm hiểu dự án</a></div>
+</div>
+</div></header>
+
+
+<section class="band dots-y pinkh" id="gioi-thieu"><div class="wrap">
+<h2>Vươn Hạ là gì?</h2>
+<p class="lede">Vươn Hạ là dự án thiện nguyện kết nối những người trẻ có chung tinh thần trách nhiệm với cộng đồng. Mùa 1 hướng đến các em nhỏ tại Trung tâm Bảo trợ và Công tác xã hội tỉnh – không chỉ hỗ trợ vật chất mà còn mang đến sự quan tâm, sẻ chia và những trải nghiệm đáng nhớ.</p>
+<div class="grid" style="margin-top:24px" id="goals"></div>
+<p class="note">Thông điệp: thiện nguyện không cần bắt đầu từ điều lớn lao – đôi khi chỉ là một chút thời gian, một sự quan tâm xuất phát từ trái tim.</p>
+<p><a href="https://docs.google.com/document/d/1eG1ungi98k78xr7aakfWlxNKz66nDpuS/edit">Đọc toàn văn Tổng quan dự án →</a></p>
+</div></section>
+
+<section class="band dots-t" id="hoat-dong"><div class="wrap">
+<h2>Hành trình Mùa 1</h2>
+<p class="lede">Ba chặng chính, mỗi chặng là một cơ hội để chúng mình cùng làm và cùng lớn lên.</p>
+<div class="path" id="path" style="margin-top:64px"></div>
+</div></section>
+
+<section class="band dots-p tealh" id="core"><div class="wrap">
+<h2>Core team &amp; các Ban</h2>
+<p class="lede">Vươn Hạ vận hành bởi Ban Điều hành, Trưởng/Phó ban, thành viên các ban và Cộng tác viên. Mỗi người một vai trò, chung một mục tiêu.</p>
+<div class="grid" id="bans"></div>
+<p class="note">Tên và ảnh của từng thành viên Core sẽ được cập nhật sau buổi Bonding.</p>
+</div></section>
+
+<section class="band teal pinkh" id="noi-quy"><div class="wrap">
+<h2>Nội quy cần nhớ</h2>
+<p class="lede">Khi nhận vị trí tại Vươn Hạ, bạn được xem là đã đọc, hiểu và cam kết tuân thủ nội quy. Dưới đây là phần tóm tắt – bản đầy đủ ở liên kết cuối mục.</p>
+<div id="rules"></div>
+<h3 style="margin-top:32px;color:var(--navy);font-size:30px">Ba mức xử lý vi phạm</h3>
+<div class="lv" id="levels"></div>
+<p style="margin-top:20px"><a href="https://docs.google.com/document/d/1X-wesLXNjX77YrvVD-n-IfK_5kVEtD8s/edit">Đọc toàn văn Nội quy dự án →</a></p>
+</div></section>
+
+<section class="band dots-y" id="tinh-diem"><div class="wrap">
+<h2>Cách tính điểm</h2>
+<p class="lede">Mỗi thành viên bắt đầu với <b>100 điểm/tháng</b>. Điểm cộng hoặc trừ theo mức hoàn thành nhiệm vụ, tinh thần trách nhiệm và sự tham gia – luôn cần minh chứng. Certificate được xét theo 3 cột: Chuyên môn, Task Bump/Seeding và Điểm chung.</p>
+<h3>Xếp loại Certificate</h3>
+<div class="scroll tbl"><table class="stack"><thead><tr><th>Vai trò</th><th>Từ 150 điểm</th><th>130 – dưới 150</th><th>Quyền lợi đi kèm</th></tr></thead><tbody id="cert"></tbody></table></div>
+<p class="note">Dưới 130 điểm: không đủ điều kiện nhận Certificate. Điểm có thể khiếu nại trong vòng 3 ngày sau khi công bố.</p>
+<h3 style="margin-top:32px">Bảng tiêu chí</h3>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="scroll tbl"><table class="stack"><thead><tr><th>Tiêu chí</th><th>Nội dung</th><th style="text-align:right">Điểm</th></tr></thead><tbody id="crit"></tbody></table></div>
+<p class="note" id="critnote"></p>
+<h3 style="margin-top:36px">Thử tính điểm tháng của bạn</h3>
+<div class="calc"><div id="calc" class="card"></div>
+<div class="card total"><small>Điểm dự kiến</small><div class="big" id="tot">100</div><p id="tier" style="margin:8px auto 14px"></p><button class="btn ghost" id="reset">Làm lại</button></div></div>
+<p><a href="https://docs.google.com/spreadsheets/d/1PGStlsxQeoaV-ybAZtpFamnjwasEXwAYUKxoG4VgefY/edit">Mở Bảng tính điểm gốc →</a></p>
+</div></section>
+
+<section class="band dots-t pinkh" id="hoi-dap"><div class="wrap">
+<h2>Giải đáp thắc mắc</h2>
+<div id="faq" style="max-width:860px"></div>
+</div></section>
+
+<section class="band dots-p tealh" id="game"><div class="wrap">
+<h2>Góc game online</h2>
+<p class="lede">Bốn trò chơi nhẹ nhàng để chơi cùng nhau qua Google Meet/Zoom: một người chia sẻ màn hình, cả nhóm cùng trả lời.</p>
+<div class="games">
+<div class="game"><h3><i>1</i>Hiểu Vươn Hạ chưa?</h3><p class="note" id="qprog"></p><p style="font-weight:700" id="qq"></p><div id="qo"></div><div class="row" style="margin-top:10px"><button class="btn" id="qn">Câu tiếp</button></div></div>
+<div class="game"><h3><i>2</i>Vòng quay thử thách</h3><p class="note">Gọi tên một bạn, bấm quay – bạn đó thực hiện thử thách trên mic/cam.</p><div class="wheel"><svg viewBox="-150 -150 300 300" id="wh"></svg></div><div class="res" id="wr" aria-live="polite"></div><div class="row" style="justify-content:center"><button class="btn" id="spin">Quay!</button></div></div>
+<div class="game"><h3><i>3</i>Đoán chữ mùa hạ</h3><p class="note" id="hint"></p><div class="word" id="word"></div><p class="res" id="hs" aria-live="polite"></p><div class="keys" id="keys"></div><div class="row" style="justify-content:center;margin-top:12px"><button class="btn ghost" id="hn">Từ mới</button></div></div>
+<div class="game"><h3><i>4</i>Bingo làm quen</h3><p class="note">Hỏi nhau trong phòng họp: tìm được bạn khớp ô nào thì đánh dấu ô đó. Đủ 1 hàng ngang, dọc hoặc chéo là BINGO!</p><div class="bingo" id="bingo"></div><p class="res" id="bs" aria-live="polite"></p><div class="row" style="justify-content:center"><button class="btn ghost" id="bn">Xáo thẻ mới</button></div></div>
+</div></div></section>
+
+<section class="band dots-y"><div class="wrap">
+<h2>Tài liệu buổi Bonding</h2>
+<div class="links">
+<a href="https://docs.google.com/document/d/1eG1ungi98k78xr7aakfWlxNKz66nDpuS/edit">Tổng quan dự án<small>Google Docs</small></a>
+<a href="https://docs.google.com/document/d/1X-wesLXNjX77YrvVD-n-IfK_5kVEtD8s/edit">Nội quy dự án<small>Google Docs</small></a>
+<a href="https://docs.google.com/spreadsheets/d/1PGStlsxQeoaV-ybAZtpFamnjwasEXwAYUKxoG4VgefY/edit">Bảng tính điểm<small>Google Sheets</small></a>
+<a href="https://canva.link/1755dsr1kcyshy8">Thiết kế Canva<small>Canva</small></a>
+<a href="#" aria-disabled="true" style="opacity:.6">Timeline buổi Bonding<small>Sẽ cập nhật</small></a>
+</div></div></section>
+
+<footer><div class="bye">Glad to meet you!</div>Dự án thiện nguyện Vươn Hạ · Mùa 1 · Người trẻ đồng hành cùng cộng đồng</footer>
+
+<script>{
+const $=s=>document.getElementById(s);
+const goals=[["Hỗ trợ cộng đồng","Gây quỹ, huy động nguồn lực cải thiện đời sống, học tập và tinh thần cho các em nhỏ tại Trung tâm."],["Lan tỏa nhân ái","Khuyến khích người trẻ chủ động tham gia thiện nguyện, có trách nhiệm hơn với cộng đồng."],["Môi trường phát triển","Rèn kỹ năng làm việc nhóm, tổ chức sự kiện, giao tiếp, quản lý và giải quyết vấn đề."],["Minh bạch","Quy trình vận hành và gây quỹ rõ ràng, mọi đóng góp được dùng đúng mục đích."]];
+$('goals').innerHTML=goals.map(g=>`<div class="card"><h3>${g[0]}</h3><p style="margin:0">${g[1]}</p></div>`).join('');
+const ev=[["Khúc Hạ","Tiền sự kiện gây quỹ mở đầu – kết nối cộng đồng, lan tỏa thông điệp và gây quỹ cho các chương trình thiện nguyện."],["Giải bóng đá Vươn Hạ","Sân chơi thể thao kết nối các bạn trẻ, khuyến khích đoàn kết, giao lưu và cùng chung tay đóng góp."],["Trao yêu thương","Hoạt động trọng tâm: thành quả gây quỹ trở thành quà tặng và sự hỗ trợ thiết thực cho các em nhỏ."]];
+$('path').innerHTML=ev.map((e,i)=>`<div class="step"><div class="dot">${i+1}</div><h3>${e[0]}</h3><p>${e[1]}</p></div>`).join('');
+const bans=[["BĐH","Ban Điều hành","#16284a","Định hướng chung, điều phối các ban và chịu trách nhiệm cuối cùng về chất lượng dự án."],["HR","Ban Nhân sự","#e9785b","Quản lý và tính điểm thành viên, đại sứ; viết biên bản họp, nhắc deadline, giữ lửa tinh thần team."],["PR","Ban Truyền thông","#249a86","Sáng tạo nội dung, quản lý fanpage và kênh social, lên lịch đăng bài, giao task bump/seeding."],["DES","Ban Thiết kế","#f2a516","Thiết kế ấn phẩm theo brief và bộ nhận diện chung, đảm bảo tính nguyên bản và sáng tạo."],["EV","Ban Sự kiện","#7aa7e0","Lên kế hoạch và vận hành sự kiện, quản lý task trên Notion/Drive, đề xuất quy trình làm việc online."],["ER","Ban Đối ngoại","#b07ac9","Tìm và kết nối đối tác, nhà tài trợ; soạn proposal, thư ngỏ và làm việc chuyên nghiệp với đối tác."]];
+$('bans').innerHTML=bans.map(b=>`<div class="card ban"><div class="ic" style="background:${b[2]}">${b[0]}</div><h3>${b[1]}</h3><p style="margin:0">${b[3]}</p></div>`).join('');
+const rules=[["Quyền lợi của thành viên",["Trực tiếp lên kế hoạch và vận hành các sự kiện Mùa 1.","Được training, hướng dẫn kỹ năng và dùng tài nguyên của dự án.","Tự do sáng tạo, đề xuất ý tưởng.","Nhận Certificate theo mức đóng góp; ưu tiên lên vị trí Quản lý/Trưởng nhóm.","Được tôn trọng, lắng nghe và được giải trình minh bạch."]],
+["Tác phong & ứng xử",["Chủ động, tự giác, chịu trách nhiệm đến cùng với việc mình nhận.","Không dùng danh nghĩa, logo, kênh của Vươn Hạ cho mục đích cá nhân khi chưa được BĐH đồng ý.","Nghiêm cấm phát ngôn thù ghét, xúc phạm, phân biệt, gây chia rẽ hay quấy rối.","Bất đồng thì tập trung vào giải pháp, không công kích cá nhân."]],
+["Nhận task & deadline",["Nhận task phải react/phản hồi và nắm rõ deadline.","Không tự ý chuyển task cho người khác khi chưa được Trưởng ban duyệt.","Xin gia hạn: báo Trưởng ban trước deadline ít nhất 12 giờ, kèm thời gian cam kết nộp.","Không chấp nhận lý do “quên”, “bận học” (không báo trước), “không thấy tin nhắn”."]],
+["Họp & sự kiện",["Tham gia đầy đủ họp online/offline, training và hỗ trợ tại Khúc Hạ, Giải bóng đá, Trao yêu thương.","Xin vắng: nhắn người phụ trách trước ít nhất 4 giờ.","Vắng có lý do vẫn phải đọc biên bản họp và tự cập nhật công việc."]],
+["Giao tiếp & bảo mật",["Thông tin chính thức qua Discord/Zalo/Messenger do BTC lập.","Phản hồi thông báo cần xác nhận trong 12 – 24 giờ.","Không chia sẻ tài liệu nội bộ, danh sách nhà tài trợ/hảo tâm hay thông tin cá nhân của các em nhỏ."]],
+["Minh bạch tài chính",["Không tự ý thu/chi hay nhận tiền quyên góp, tài trợ dưới danh nghĩa cá nhân.","Mọi đóng góp được ghi nhận đầy đủ, công khai theo quy trình tài chính Mùa 1.","Gian lận tài chính dù nhỏ đều bị xử lý ở mức cao nhất."]],
+["Tạm nghỉ & rời dự án",["Tạm ngừng (on-leave): xin phép Trưởng ban trước ít nhất 3 ngày.","Rời dự án: báo trước 7 ngày và bàn giao toàn bộ công việc, tài nguyên, file."]]];
+$('rules').innerHTML=rules.map(r=>`<details><summary>${r[0]}</summary><div><ul>${r[1].map(x=>`<li>${x}</li>`).join('')}</ul></div></details>`).join('');
+const lv=[["Mức 1 · Nhắc nhở","#fbe7a1","Trễ deadline lần đầu (dưới 24h), vắng họp không báo 1 lần, chậm phản hồi, không xác nhận task.","Trưởng ban nhắc nhở, ghi vào hệ thống đánh giá."],["Mức 2 · Cảnh cáo","#bfe8dd","Trễ deadline 2–3 lần, bỏ họp/sự kiện không xin phép, thiếu trách nhiệm, ứng xử thiếu văn hóa.","Biên bản cảnh cáo, hạ mức Certificate hoặc tạm ngưng giao việc."],["Mức 3 · Khai trừ","#249a86","Gian lận tài chính, lộ tài liệu mật, gây hại uy tín dự án hoặc các em, “ghost” quá 5 ngày.","Chấm dứt tư cách ngay, không cấp Certificate, thu hồi quyền truy cập."]];
+$('levels').innerHTML=lv.map(l=>`<div class="card" style="--c:${l[1]}"><h3>${l[0]}</h3><p>${l[2]}</p><small><b style="color:var(--navy)">Xử lý:</b> ${l[3]}</small></div>`).join('');
+const cert=[["Core Team","Certificate có mộc đỏ từ Nhà Bảo trợ pháp lý","Certificate có chữ ký BTC","Bài tri ân trên 2 Fanpage, merch độc quyền, thư chúc mừng các dịp lễ"],["Thành viên","Certificate online có mộc đỏ từ Nhà Bảo trợ và BTC","Certificate bản mềm có chữ ký BTC","Bài tri ân trên 2 Fanpage, áo sự kiện và merch độc quyền"],["ĐSTT","Certificate online có chữ ký BTC","Certificate online có chữ ký BTC","Bài tri ân trên 2 Fanpage"]];
+$('cert').innerHTML=cert.map(c=>`<tr><td><b>${c[0]}</b></td><td>${c[1]}</td><td>${c[2]}</td><td>${c[3]}</td></tr>`).join('');
+const T={"Điểm chung":{n:"Áp dụng thống nhất cho toàn bộ thành viên các ban.",r:[["Họp","Tham gia đầy đủ, đúng giờ họp/training chung","+1"],["Hỗ trợ","Chủ động hỗ trợ hoạt động chung ngoài phân công","+3"],["Task chung","Hoàn thành task chung đúng hạn, đạt yêu cầu","+1"],["Đóng góp","Đóng góp tích cực, thiết thực khi tổ chức hoạt động","+3"],["Vote lịch","Không vote lịch họp trước khi được nhắc","-1"],["Vote lịch","Không vote sau khi HR đã nhắc riêng","-3"],["Họp","Vắng họp/training không lý do, không xin phép","-4"],["Họp","Đến muộn họp hoặc trễ ca trực không báo","-1"],["Task chung","Không thực hiện task chung","-3"],["Task chung","Hoàn thành task chung sau hạn","-2"],["Hình thức","Hoàn thành nhưng sai quy định trình bày, xác nhận","-1"],["Họp online","Gây mất trật tự, làm việc riêng khi họp","-3"],["Sự kiện","Bỏ ngang nhiệm vụ, mất liên lạc khi làm nhiệm vụ","-10 + cảnh cáo"],["Ứng xử","Cố ý gây xích mích, miệt thị thành viên","-10 + cảnh cáo"],["Bản quyền","Vi phạm bản quyền hình ảnh, nội dung, thiết kế","-5 + cảnh cáo"],["Bảo mật","Lộ tài liệu nội bộ / thông tin các em nhỏ","-10 + xét khai trừ"]]},
+"Bump / Seeding":{n:"Điểm cộng tối đa mỗi tiêu chí +5/lần. Yêu cầu cụ thể do Ban Truyền thông đưa ra.",r:[["Bump","Hoàn thành bump/seeding đúng yêu cầu, đúng hạn","+1"],["Bump","Hoàn thành sớm theo yêu cầu","+2"],["Chia sẻ","Chia sẻ bài lên Story hoặc cộng đồng phù hợp","+3"],["Kêu gọi","Kêu gọi bạn bè, người thân tương tác, chia sẻ","+3"],["Hiệu quả","Bài viết mình phụ trách đạt hiệu quả nổi bật","+5/bài"],["Sai quy định","Sai cú pháp, thiếu hashtag","-1"],["Trễ","Trễ 1–3 ngày không lý do","-2"],["Trễ","Trễ quá 3 ngày hoặc bỏ qua","-3"]]},
+"HR":{n:"Điểm cộng cần minh chứng gửi Core HR. Hạn cập nhật bảng điểm: 23:59 Chủ nhật hằng tuần.",r:[["Bảng điểm","Cập nhật đúng, đủ, đúng hạn","+5"],["Bảng điểm","Tính sai hoặc bỏ sót điểm","-3"],["Đại sứ","Thu đủ minh chứng, cập nhật đúng hạn","+5"],["Biên bản","Gửi đủ nội dung trong 24h sau họp","+5"],["Deadline","Nhắc đúng lịch (trước 7 ngày, 3 ngày, đúng ngày)","+5"],["Deadline","Quên nhắc deadline được giao","-3"],["Tinh thần","Chủ trì một hoạt động gắn kết","+5"],["Họp","Vắng họp không xin phép","-8"]]},
+"PR":{n:"Điểm cộng cần minh chứng gửi Core PR. Vượt kỳ vọng thưởng tối đa +2/nhiệm vụ.",r:[["Content","Bàn giao bài viết đúng hạn, đạt chất lượng","+5"],["Content","Sai chính tả, sai thông tin, lệch brand voice","-3"],["Content","Đăng sai lịch hoặc sai kênh","-5"],["Media","Trả ấn phẩm đúng deadline, đúng branding","+5"],["Social","Đăng bài đúng giờ, đủ hashtag, visual chỉn chu","+5"],["Social","Phản hồi comment, inbox đúng quy định","+2"],["Biên bản","Gửi biên bản & danh sách việc trong 24h","+5"],["Họp","Vắng họp không xin phép","-8"]]},
+"Thiết kế":{n:"Mỗi hành vi chỉ tính một lần; có lý do chính đáng thì trưởng ban xem xét trước khi trừ.",r:[["Chủ động","Xung phong nhận task khi ban cần","+5"],["Chủ động","Né tránh task nhiều lần không lý do","-5"],["Tiến độ","Nộp trước deadline, đảm bảo chất lượng","+5"],["Tiến độ","Nộp đúng deadline, đảm bảo chất lượng","+3"],["Tiến độ","Trễ deadline không báo trước","-5"],["Nguyên bản","Tự ý dùng AI thay phần sáng tạo cá nhân","-5"],["Nguyên bản","Trace thiết kế người khác không ghi nguồn","-5"],["Chất lượng","Sai brief, kích thước, nội dung, nhận diện","-6"]]},
+"Sự kiện":{n:"Điểm cộng và trừ đều cần minh chứng cụ thể; nộp task trên Notion/Drive.",r:[["Tiến độ","Nộp task trước deadline ít nhất 24 giờ","+2 đến +3"],["Tiến độ","Trễ deadline không báo / phải nhắc mới nộp","-5"],["Tương tác","Phản hồi tag trong 2–4 giờ, tích cực góp ý","+1 đến +2"],["Tương tác","Không phản hồi tag khẩn quá 24 giờ","-3 đến -5"],["Hỗ trợ","Chủ động hỗ trợ thành viên ban khác","+3"],["Sáng kiến","Đề xuất template, quy trình làm việc online","+3 đến +5"],["Bảo mật","Chia sẻ tài liệu nội bộ ra ngoài","-10"]]},
+"Đối ngoại":{n:"Tính theo kết quả thực tế; điểm tổng kết không thấp hơn 0.",r:[["Đối tác","Tìm được 1 đối tác tiềm năng phù hợp","+5"],["Đối tác","Kết nối thành công nhà tài trợ/đơn vị đồng hành","+3"],["Đối tác","Đàm phán, thống nhất phương án hợp tác","+3"],["Tài liệu","Hoàn thành proposal, thư ngỏ đúng yêu cầu","+3"],["Thái độ","Chủ động tìm cơ hội hợp tác ngoài nhiệm vụ","+3"],["Vi phạm","Trễ deadline trên 24 giờ","-4"],["Vi phạm","Không hoàn thành nhiệm vụ được giao","-5"],["Vi phạm","Tự ý cam kết, cung cấp thông tin sai cho đối tác","-10"]]}};
+const tabs=Object.keys(T);
+const show=k=>{$('tabs').innerHTML=tabs.map(t=>`<button role="tab" aria-selected="${t===k}" data-t="${t}">${t}</button>`).join('');
+$('crit').innerHTML=T[k].r.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td class="n ${r[2][0]==='+'?'p':'m'}">${r[2]}</td></tr>`).join('');$('critnote').textContent=T[k].n};
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(b.dataset.t)});show(tabs[0]);
+const C=[["Họp/training đầy đủ, đúng giờ",1],["Hỗ trợ hoạt động chung ngoài phân công",3],["Task chung đúng hạn",1],["Bump/seeding đúng hạn",1],["Chia sẻ bài lên Story",3],["Đến muộn họp không báo",-1],["Vắng họp không xin phép",-4],["Task chung trễ hạn",-2],["Bump/seeding trễ 1–3 ngày",-2]];
+const cnt=C.map(()=>0);
+const tier=s=>s>=150?"Đủ điều kiện Certificate mức cao nhất (từ 150 điểm)":s>=130?"Đủ điều kiện Certificate (130 – dưới 150)":"Chưa đủ 130 điểm để xét Certificate";
+const calc=()=>{$('calc').innerHTML=C.map((c,i)=>`<div class="ci"><span>${c[0]}</span><b class="${c[1]>0?'p':'m'}">${c[1]>0?'+':''}${c[1]}</b><button data-i="${i}" data-d="-1" aria-label="Bớt">−</button><output>${cnt[i]}</output><button data-i="${i}" data-d="1" aria-label="Thêm">+</button></div>`).join('');
+const s=100+C.reduce((a,c,i)=>a+c[1]*cnt[i],0);$('tot').textContent=s;$('tier').textContent=tier(s)};
+$('calc').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i;cnt[i]=Math.max(0,cnt[i]+ +b.dataset.d);calc()});
+$('reset').onclick=()=>{cnt.fill(0);calc()};calc();
+const faq=[["Mình bận thi, có được tạm nghỉ không?","Được. Gửi đơn hoặc tin nhắn xin tạm ngừng (on-leave) cho Trưởng ban trước ít nhất 3 ngày."],["Sợ không kịp deadline thì làm sao?","Báo Trưởng ban trước deadline ít nhất 12 giờ, nêu lý do và thời gian cam kết nộp lại. Báo sớm luôn tốt hơn im lặng."],["Mình phải vắng một buổi họp thì sao?","Nhắn người phụ trách trước ít nhất 4 giờ. Sau đó đọc biên bản họp và tự cập nhật phần việc của mình."],["Điểm được tính như thế nào và ai tính?","Mỗi tháng bắt đầu từ 100 điểm. Ban Nhân sự tổng hợp dựa trên minh chứng thực tế và cập nhật định kỳ để mọi người kiểm tra."],["Nếu mình thấy điểm bị tính sai?","Bạn có thể khiếu nại trong vòng 3 ngày kể từ khi bảng điểm được công bố, kèm minh chứng."],["Bao nhiêu điểm thì được nhận Certificate?","Từ 130 điểm trở lên. Từ 150 điểm bạn nhận mức Certificate cao hơn theo vai trò; dưới 130 điểm thì không đủ điều kiện."],["Thông báo của dự án được gửi ở đâu?","Qua các kênh chính thức do BTC lập (Discord/Zalo/Messenger). Nhớ thả icon hoặc phản hồi trong 12 – 24 giờ."],["Bạn bè muốn ủng hộ tiền cho dự án, mình nhận giúp được không?","Không nên. Mọi khoản đóng góp phải đi qua Ban Tài chính – Đối ngoại để đảm bảo minh bạch."]];
+$('faq').innerHTML=faq.map(f=>`<details><summary>${f[0]}</summary><div><p style="margin:0">${f[1]}</p></div></details>`).join('');
+const Q=[["Thông điệp của Vươn Hạ là gì?",["Người trẻ đồng hành cùng cộng đồng","Mùa hạ rực rỡ","Sống xanh mỗi ngày"],0],["Tiền sự kiện gây quỹ của Mùa 1 tên là gì?",["Hạ Vàng","Khúc Hạ","Nắng Hạ"],1],["Muốn xin gia hạn deadline, cần báo Trưởng ban trước ít nhất bao lâu?",["2 giờ","12 giờ","3 ngày"],1],["Mỗi thành viên bắt đầu tháng với bao nhiêu điểm?",["50","100","150"],1],["Cần tối thiểu bao nhiêu điểm để được xét Certificate?",["100","120","130"],2],["Xin vắng họp phải nhắn trước ít nhất bao lâu?",["4 giờ","30 phút","1 tuần"],0],["Muốn rời dự án, cần thông báo trước bao nhiêu ngày?",["3 ngày","7 ngày","14 ngày"],1],["Hoạt động trọng tâm của Mùa 1 là gì?",["Giải bóng đá","Sự kiện trao yêu thương","Hội chợ đồ cũ"],1]];
+let qi=0,qs=0,qa=false;
+const qr=()=>{if(qi>=Q.length){$('qprog').textContent='';$('qq').textContent=`Hoàn thành! Bạn đúng ${qs}/${Q.length} câu.`;$('qo').innerHTML='';$('qn').textContent='Chơi lại';return}
+const q=Q[qi];qa=false;$('qprog').textContent=`Câu ${qi+1}/${Q.length} · Điểm: ${qs}`;$('qq').textContent=q[0];$('qn').textContent='Câu tiếp';
+$('qo').innerHTML=q[1].map((o,i)=>`<button class="opt" data-i="${i}">${o}</button>`).join('')};
+$('qo').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||qa)return;qa=true;const a=Q[qi][2];const bs=$('qo').querySelectorAll('button');bs[a].classList.add('ok');if(+b.dataset.i===a)qs++;else b.classList.add('no');$('qprog').textContent=`Câu ${qi+1}/${Q.length} · Điểm: ${qs}`});
+$('qn').onclick=()=>{if(qi>=Q.length){qi=0;qs=0}else qi++;qr()};qr();
+const W=["Hát 1 câu bài hát mùa hè","Kể 1 kỷ niệm đáng nhớ","Bắt chước giọng 1 bạn trong nhóm","Giới thiệu bản thân bằng 3 emoji","Khen 1 thành viên bất kỳ","Nhảy 5 giây trên cam","Nói câu slogan của Vươn Hạ","Kể 1 sở thích ít ai biết"];
+const cols=["#fbe7a1","#bfe8dd","#ffd66b","#f2a516","#249a86","#fff8ef","#d6f3ea","#f2a516"];
+const n=W.length,a=2*Math.PI/n;
+$('wh').innerHTML=W.map((w,i)=>{const s=i*a-Math.PI/2,e=s+a,x1=140*Math.cos(s),y1=140*Math.sin(s),x2=140*Math.cos(e),y2=140*Math.sin(e),m=(i+.5)*a*180/Math.PI-90;
+return `<path d="M0 0L${x1} ${y1}A140 140 0 0 1 ${x2} ${y2}Z" fill="${cols[i]}" stroke="#16284a" stroke-width="2"/><text transform="rotate(${m}) translate(82 4)" text-anchor="middle" font-size="15" font-weight="800" fill="#16284a">${i+1}</text>`}).join('')+'<circle r="18" fill="#16284a"/><circle r="8" fill="#fbe7a1"/>';
+let rot=0;
+$('spin').onclick=()=>{const k=Math.floor(Math.random()*n);rot+=360*5+(360-((k+.5)*360/n))-(rot%360);$('wh').style.transform=`rotate(${rot}deg)`;$('wr').textContent='Đang quay…';
+setTimeout(()=>{$('wr').textContent=`Ô ${k+1}: ${W[k]}`},matchMedia('(prefers-reduced-motion: reduce)').matches?50:4000)};
+const H=[["KHUC HA","Tên tiền sự kiện gây quỹ"],["THIEN NGUYEN","Điều Vươn Hạ làm vì cộng đồng"],["DEADLINE","Tôn chỉ hoạt động của cả đội"],["MINH BACH","Ưu tiên sống còn khi gây quỹ"],["BONG DA","Môn thể thao của giải đấu Mùa 1"],["MUA HE","Mùa trong tên dự án"],["CERTIFICATE","Phần thưởng khi đủ điểm"],["YEU THUONG","Thứ chúng mình muốn trao đi"]];
+let hw,hg,hm;const ML=6;
+const hr=()=>{const done=[...hw].every(c=>c===' '||hg.has(c));$('word').innerHTML=[...hw].map(c=>c===' '?'<span class="sp"></span>':`<span>${hg.has(c)||hm>=ML?c:''}</span>`).join('');
+$('hs').textContent=done?'Chính xác! Giỏi quá!':hm>=ML?`Hết lượt! Đáp án: ${hw}`:`Sai ${hm}/${ML} lượt`;
+$('keys').innerHTML=[..."ABCDEGHIKLMNOPQRSTUVXY"].map(k=>`<button ${hg.has(k)||done||hm>=ML?'disabled':''}>${k}</button>`).join('')};
+const hn=()=>{const p=H[Math.floor(Math.random()*H.length)];hw=p[0];$('hint').textContent='Gợi ý: '+p[1]+' (không dấu)';hg=new Set();hm=0;hr()};
+$('keys').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const k=b.textContent;hg.add(k);if(!hw.includes(k))hm++;hr()});
+$('hn').onclick=hn;hn();
+const B=["Sinh tháng 6, 7 hoặc 8","Từng đi tình nguyện","Biết chơi đàn","Thích ăn kem","Đá bóng giỏi","Có thú cưng","Thức khuya nhất nhóm","Học chuyên Văn","Thích chụp ảnh","Từng làm MC","Đang dùng ảnh đại diện là mèo","Có anh chị em ruột","Đã đi biển hè này","Thích vẽ","Nói được 2 ngoại ngữ","Mê trà sữa","Dậy trước 6 giờ sáng","Thích làm thiết kế","Biết nấu ăn","Lần đầu làm dự án"];
+let bo=[];
+const bl=[[0,1,2,3],[4,5,6,7],[8,9,10,11],[12,13,14,15],[0,4,8,12],[1,5,9,13],[2,6,10,14],[3,7,11,15],[0,5,10,15],[3,6,9,12]];
+const br=()=>{$('bs').textContent=bl.some(l=>l.every(i=>bo[i].on))?'BINGO! Hô to lên mic nào!':''};
+const bn=()=>{bo=B.slice().sort(()=>Math.random()-.5).slice(0,16).map(t=>({t,on:false}));$('bingo').innerHTML=bo.map((c,i)=>`<button data-i="${i}" aria-pressed="false">${c.t}</button>`).join('');br()};
+$('bingo').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const c=bo[+b.dataset.i];c.on=!c.on;b.classList.toggle('on',c.on);b.setAttribute('aria-pressed',c.on);br()});
+$('bn').onclick=bn;bn();
+}</script>
+</body>
+</html>
